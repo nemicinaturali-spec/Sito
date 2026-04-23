@@ -9,7 +9,7 @@ export default function Photos() {
     { src: "/IMG_5389.JPG", alt: "Basso dal vivo" },
     { src: "/IMG_5392.jpeg", alt: "Chitarra 2 dal vivo" },
     { src: "/IMG_5630.JPG", alt: "Batteria dal vivo" },
-    { src: "/IMG_5584.JPG", alt: "Chitarra 3 dal vivo" },
+    { src: "/IMG_5415.JPG", alt: "Chitarra 3 dal vivo" },
     { src: "/IMG_5643.JPG", alt: "Gruppo daò vivo" },
   ];
 
