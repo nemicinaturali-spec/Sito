@@ -88,7 +88,6 @@ export default function Home() {
             NESSUN COMPROMESSO
           </h2>
           <div className="space-y-8 text-muted-foreground text-lg md:text-xl font-mono max-w-2xl leading-relaxed">
-            <p>La nostra musica è vera, sentita e analogica. </p>
             <p>Siamo i vostri Nemici Naturali.</p>
           </div>
         </div>
