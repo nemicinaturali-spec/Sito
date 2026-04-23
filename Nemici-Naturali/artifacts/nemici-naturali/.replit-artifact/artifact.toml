@@ -1,0 +1,31 @@
+kind = "web"
+previewPath = "/"
+title = "Nemici Naturali"
+version = "1.0.0"
+id = "artifacts/nemici-naturali"
+router = "path"
+
+[[integratedSkills]]
+name = "react-vite"
+version = "1.0.0"
+
+[[services]]
+name = "web"
+paths = [ "/" ]
+localPort = 18988
+
+[services.development]
+run = "pnpm --filter @workspace/nemici-naturali run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/nemici-naturali", "run", "build" ]
+publicDir = "artifacts/nemici-naturali/dist/public"
+serve = "static"
+
+[[services.production.rewrites]]
+from = "/*"
+to = "/index.html"
+
+[services.env]
+PORT = "18988"
+BASE_PATH = "/"

@@ -1,0 +1,44 @@
+uploads = []
+outputs = []
+
+[[generated]]
+id = "msMkeya2GScCSNM1iYYie"
+uri = "file://artifacts/nemici-naturali/public/hero-bg.png"
+type = "image"
+title = "Moody stage with microphone"
+
+[[generated]]
+id = "y_r2py2miSTWegqN1lXv9"
+uri = "file://artifacts/nemici-naturali/public/film-1.png"
+type = "image"
+title = "Film backstage gear"
+
+[[generated]]
+id = "J2Sv7_EHNnjg6Mzs6lr1g"
+uri = "file://artifacts/nemici-naturali/public/film-2.png"
+type = "image"
+title = "Film amplifier detail"
+
+[[generated]]
+id = "DtEo5L2zCkiFjZCXuiJhN"
+uri = "file://artifacts/nemici-naturali/public/film-3.png"
+type = "image"
+title = "Film drum sticks"
+
+[[generated]]
+id = "Rky7aNOjaRzi9QhsBzyGV"
+uri = "file://artifacts/nemici-naturali/public/digital-1.png"
+type = "image"
+title = "Digital guitar action"
+
+[[generated]]
+id = "SF_v7TsfcdXPDorKCoKt2"
+uri = "file://artifacts/nemici-naturali/public/digital-2.png"
+type = "image"
+title = "Digital drum kit"
+
+[[generated]]
+id = "Mvi9a0iqgtLfu_4CFAQ9Z"
+uri = "file://artifacts/nemici-naturali/public/digital-3.png"
+type = "image"
+title = "Digital microphone close"
