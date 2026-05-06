@@ -4,17 +4,6 @@ import { ArrowRight, Ticket, MapPin } from "lucide-react";
 export default function Shows() {
   const shows = [
     {
-      id: 1,
-      date: "9 APRILE 2026",
-      venue: "DASTE",
-      location: "BERGAMO",
-      doors: "9:00 PM",
-      price: "FREE",
-      status: "ESAURITO",
-      ticketUrl: "https://example.com/tickets",
-      soldOut: true,
-    },
-    {
       id: 2,
       date: "7 GIUGNO 2026",
       venue: "BOCCALEONE MUSIC FEST",
@@ -25,6 +14,17 @@ export default function Shows() {
       ticketUrl: "https://www.instagram.com/cineteatro_boccaleone/",
       soldOut: false,
     },
+    {
+      id: 1,
+      date: "9 APRILE 2026",
+      venue: "DASTE",
+      location: "BERGAMO",
+      doors: "9:00 PM",
+      price: "FREE",
+      status: "ESAURITO",
+      ticketUrl: "https://example.com/tickets",
+      soldOut: true,
+    }
   ];
 
   return (
