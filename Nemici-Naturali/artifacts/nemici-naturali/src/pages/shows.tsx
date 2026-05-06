@@ -14,6 +14,17 @@ export default function Shows() {
       ticketUrl: "https://example.com/tickets",
       soldOut: true,
     },
+    {
+      id: 2,
+      date: "7 GIUGNO 2026",
+      venue: "BOCCALEONE MUSIC FEST",
+      location: "ORATORIO BOCCALEONE",
+      doors: "8:15 PM",
+      price: "FREE",
+      status: "INFO",
+      ticketUrl: "https://www.instagram.com/cineteatro_boccaleone/",
+      soldOut: false,
+    },
   ];
 
   return (
