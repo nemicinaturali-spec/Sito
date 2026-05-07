@@ -70,7 +70,7 @@ export default function Shows() {
       <div className="max-w-5xl mx-auto">
         <div className="mb-16 animate-in slide-in-from-left-8 duration-700 fade-in">
           <h1 className="font-display text-6xl md:text-8xl font-black text-white tracking-tighter uppercase mb-2">
-            Rumore <span className="text-primary">Live</span>
+            Suoni <span className="text-primary">Live</span>
           </h1>
           <p className="text-muted-foreground font-mono text-lg tracking-widest uppercase">
             DATE IN PROGRAMMA
