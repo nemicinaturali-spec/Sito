@@ -71,20 +71,19 @@ export default function Shows() {
               </div>
 
               {/* CTA Section */}
-              <div className="w-full md:w-1/4 flex flex-col md:flex-row md:justify-end gap-3">
-                {/* Nuovo Bottone Evento Gratuito */}
-                {show.price === "FREE" && (
-                  <div className="inline-flex items-center justify-center rounded-md border border-primary/50 text-primary px-4 py-3 font-mono font-bold tracking-widest text-xs uppercase">
-                    EVENTO GRATUITO
-                  </div>
-                )}
-
-                {/* Pulsante Stato (Biglietti o Esaurito) */}
+              <div className="w-full md:w-1/4 flex md:justify-end">
                 {show.soldOut ? (
-                  <div className="inline-block rounded-md border border-destructive/50 text-destructive px-6 py-3 font-mono font-bold tracking-widest text-sm uppercase text-center">
+                  /* Priorità 1: Se esaurito, mostra ESAURITO */
+                  <div className="inline-block rounded-md border border-destructive/50 text-destructive px-6 py-3 font-mono font-bold tracking-widest text-sm uppercase text-center w-full md:w-auto">
                     ESAURITO
                   </div>
+                ) : show.price === "FREE" ? (
+                  /* Priorità 2: Se gratuito (e non esaurito), mostra EVENTO GRATUITO */
+                  <div className="inline-flex items-center justify-center rounded-md border border-primary/50 text-primary px-6 py-3 font-mono font-bold tracking-widest text-sm uppercase w-full md:w-auto">
+                    EVENTO GRATUITO
+                  </div>
                 ) : (
+                  /* Priorità 3: Se a pagamento e disponibile, mostra tasto BIGLIETTI */
                   <a
                     href={show.ticketUrl}
                     target="_blank"
