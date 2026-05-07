@@ -1,10 +1,10 @@
 import React from "react";
-import { ArrowRight, Ticket, MapPin } from "lucide-react";
+import { ArrowRight, Ticket, MapPin, Lock } from "lucide-react"; // Aggiunta icona Lock per coerenza
 
 export default function Shows() {
   const shows = [
     {
-      id: 2,
+      id: 5,
       date: "7 GIUGNO 2026",
       venue: "BOCCALEONE MUSIC FEST",
       location: "ORATORIO BOCCALEONE",
@@ -13,9 +13,10 @@ export default function Shows() {
       status: "INFO",
       ticketUrl: "https://www.instagram.com/cineteatro_boccaleone/",
       soldOut: false,
+      isPrivate: false,
     },
     {
-      id: 1,
+      id: 4,
       date: "9 APRILE 2026",
       venue: "DASTE",
       location: "BERGAMO",
@@ -24,6 +25,43 @@ export default function Shows() {
       status: "ESAURITO",
       ticketUrl: "https://example.com/tickets",
       soldOut: true,
+      isPrivate: false,
+    },
+    {
+      id: 3,
+      date: "20 SETTEMBRE 2025",
+      venue: "CTE BOCCALEONE",
+      location: "BERGAMO",
+      doors: "4:00 PM",
+      price: "FREE",
+      status: "ESAURITO",
+      ticketUrl: "https://example.com/tickets",
+      soldOut: true,
+      isPrivate: false,
+    },
+    {
+      id: 2,
+      date: "6 SETTEMBRE 2025",
+      venue: "CAMBIO PALCO @BOPO",
+      location: "PONTERANICA (BG)",
+      doors: "5:00 PM",
+      price: "FREE",
+      status: "ESAURITO",
+      ticketUrl: "https://example.com/tickets",
+      soldOut: true,
+      isPrivate: false,
+    },
+    {
+      id: 1,
+      date: "21 GIUGNO 2025",
+      venue: "Casa Circondariale di Voghera",
+      location: "VOGHERA",
+      doors: "N/A",
+      price: "N/A",
+      status: "PRIVATE",
+      ticketUrl: "#",
+      soldOut: false,
+      isPrivate: true, // Nuova proprietà per gestire l'evento chiuso
     }
   ];
 
@@ -43,7 +81,7 @@ export default function Shows() {
           {shows.map((show, i) => (
             <div
               key={show.id}
-              className={`group flex flex-col md:flex-row md:items-center py-8 border-b border-border transition-colors duration-300 hover:bg-card/50 ${show.soldOut ? "opacity-60" : ""} animate-in fade-in slide-in-from-bottom-4 fill-mode-both`}
+              className={`group flex flex-col md:flex-row md:items-center py-8 border-b border-border transition-colors duration-300 hover:bg-card/50 ${show.soldOut || show.isPrivate ? "opacity-60" : ""} animate-in fade-in slide-in-from-bottom-4 fill-mode-both`}
               style={{ animationDelay: `${(i + 1) * 100}ms` }}
             >
               {/* Date */}
@@ -72,18 +110,21 @@ export default function Shows() {
 
               {/* CTA Section */}
               <div className="w-full md:w-1/4 flex md:justify-end">
-                {show.soldOut ? (
-                  /* Priorità 1: Se esaurito, mostra ESAURITO */
+                {show.isPrivate ? (
+                  /* Opzione: EVENTO CHIUSO AL PUBBLICO */
+                  <div className="inline-flex items-center justify-center gap-2 rounded-md border border-muted-foreground/50 text-muted-foreground px-6 py-3 font-mono font-bold tracking-widest text-xs uppercase text-center w-full md:w-auto">
+                    <Lock size={14} />
+                    EVENTO CHIUSO AL PUBBLICO
+                  </div>
+                ) : show.soldOut ? (
                   <div className="inline-block rounded-md border border-destructive/50 text-destructive px-6 py-3 font-mono font-bold tracking-widest text-sm uppercase text-center w-full md:w-auto">
                     ESAURITO
                   </div>
                 ) : show.price === "FREE" ? (
-                  /* Priorità 2: Se gratuito (e non esaurito), mostra EVENTO GRATUITO */
                   <div className="inline-flex items-center justify-center rounded-md border border-primary/50 text-primary px-6 py-3 font-mono font-bold tracking-widest text-sm uppercase w-full md:w-auto">
                     EVENTO GRATUITO
                   </div>
                 ) : (
-                  /* Priorità 3: Se a pagamento e disponibile, mostra tasto BIGLIETTI */
                   <a
                     href={show.ticketUrl}
                     target="_blank"
