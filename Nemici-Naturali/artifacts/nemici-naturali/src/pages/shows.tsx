@@ -70,10 +70,18 @@ export default function Shows() {
                 </div>
               </div>
 
-              {/* CTA */}
-              <div className="w-full md:w-1/4 flex md:justify-end">
+              {/* CTA Section */}
+              <div className="w-full md:w-1/4 flex flex-col md:flex-row md:justify-end gap-3">
+                {/* Nuovo Bottone Evento Gratuito */}
+                {show.price === "FREE" && (
+                  <div className="inline-flex items-center justify-center rounded-md border border-primary/50 text-primary px-4 py-3 font-mono font-bold tracking-widest text-xs uppercase">
+                    EVENTO GRATUITO
+                  </div>
+                )}
+
+                {/* Pulsante Stato (Biglietti o Esaurito) */}
                 {show.soldOut ? (
-                  <div className="inline-block rounded-md border border-destructive/50 text-destructive px-6 py-3 font-mono font-bold tracking-widest text-sm uppercase">
+                  <div className="inline-block rounded-md border border-destructive/50 text-destructive px-6 py-3 font-mono font-bold tracking-widest text-sm uppercase text-center">
                     ESAURITO
                   </div>
                 ) : (
