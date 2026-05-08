@@ -20,7 +20,7 @@ export default function Shows() {
       date: "29 MAGGIO 2026",
       venue: "IMMACOLATA FEST",
       location: "ORATORIO ALZANO CENTRO (BG)",
-      doors: "8:15 PM",
+      doors: "9:00 PM",
       price: "FREE",
       status: "INFO",
       ticketUrl: "https://www.instagram.com/oratori_alzano/",
