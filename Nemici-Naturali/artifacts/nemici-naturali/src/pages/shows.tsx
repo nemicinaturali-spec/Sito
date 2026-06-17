@@ -24,7 +24,7 @@ export default function Shows() {
       price: "FREE",
       status: "ESAURITO",
       ticketUrl: "https://www.instagram.com/cineteatro_boccaleone/",
-      soldOut: false,
+      soldOut: true,
       isPrivate: false,
     },
     {
@@ -36,7 +36,7 @@ export default function Shows() {
       price: "FREE",
       status: "ESAURITO",
       ticketUrl: "https://www.instagram.com/oratori_alzano/",
-      soldOut: false,
+      soldOut: true,
       isPrivate: false,
     },
     {
