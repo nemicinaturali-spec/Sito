@@ -10,9 +10,9 @@ export default function Shows() {
       location: "LORETO",
       doors: "10:30 PM",
       price: "FREE",
-      status: "INFO",
+      status: "ESAURITO",
       ticketUrl: "https://www.instagram.com/clamore.festival/",
-      soldOut: false,
+      soldOut: true,
       isPrivate: false,
     },
     {
